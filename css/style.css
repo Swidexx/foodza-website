@@ -1,9 +1,90 @@
-/*
-Green: #65a563
-*/
+
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700|Lobster');
 
-button{
+.nav {
+  background-color: white;
+  height: 50px;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button#register_btn, button#partners_btn, button#about_btn, button#features_btn{
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: white;
+  font-size: 30px;
+  font-weight: 300;
+  color: #222;
+  padding-top: 5px;
+  height: 50px;
+  transition: .5s;
+  cursor: pointer;
+  text-decoration: none;
+  border:none;
+}
+button#register_btn:hover, button#partners_btn:hover, button#about_btn:hover, button#features_btn:hover {
+  background-color: #222;
+  color: white;
+}
+
+a.footer{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  color: #222;
+  width: 150px;
+  height: 100%;
+  transition: .5s;
+  padding: 10px;
+  text-decoration: none;
+}
+
+a.footer:hover {
+  color: #444;
+}
+
+ul{
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: white;
+    font-size: 40px;
+    list-style-type: none;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 0;
+    top: 0;
+    left: 0;
+    display: table;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+form.register {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  color: white;
+  padding: 50px;
+}
+
+input{
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  height: 50px;
+  width: 250px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+select {
+  width: 500px;
+  border: none;
+  height: 50px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+}
+
+.submit {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 40px;
   font-weight: 300;
@@ -11,30 +92,46 @@ button{
   background-color: transparent;
   border: solid;
   border-color: white;
-  border-width: 2px;
-  width: 150px;
-  height: 100%;
+  border-width: 1px;
+  width: 500px;
   transition: .5s;
   cursor: pointer;
+  text-align: center;
 }
 
-ul {
+.submit:hover {
+  background-color: white;
+  color: #222;
+}
+
+.personal{
     font-family: 'Josefin Sans', sans-serif;
     background-color: white;
     font-size: 40px;
     list-style-type: none;
     overflow: hidden;
     font-size: 20px;
+    padding: 0;
     position: fixed;
     top: 0;
     left: 0;
     display: table;
     width: 100%;
     margin: 0 auto;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-li {
+.logo {
+  text-align: center;
+  width:47px;
+  height: auto;
+}
+
+li.top {
     float: left;
+}
+li.account {
+    float: right;
 }
 
 li a {
@@ -51,14 +148,9 @@ li a:hover:not(.active) {
     color: white;
 }
 
-button:hover {
-  background-color: white;
-  color: black;
-}
-
 .bar {
   background-color: transparent;
-  width: 75%;
+  width: 100%;
   top: 0;
   left: 0;
   margin: 0 auto;
@@ -68,9 +160,28 @@ button:hover {
 .bar2 {
   background-color: white;
   width: 100%;
-  position: absolute;
   left: 0;
   margin: 0 auto;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bar3 {
+  background-color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  left: 0;
+  margin: 0 auto;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bar4 {
+  background-color: transparent;
+  width: 50%;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: -2;
 }
 
 .header {
@@ -84,13 +195,34 @@ img {
   width: 100px;
 }
 
-table {
+table.features {
   width: 100%;
 }
 
-td {
+td.features {
   width: 25%;
   text-align: center;
+}
+
+table.menu {
+  width: 80%;
+  border-collapse: collapse;
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+td.menu {
+  padding: 0;
+  width: 20%;
+  transition: 0.5s;
+  padding: 10px;
+}
+
+td.menu:nth-child(even) {
+  background-color: white;
+}
+
+td.menu:nth-child(odd) {
+  background-color: #efefef;
 }
 
 .paragraph {
@@ -121,7 +253,7 @@ video {
 p {
   text-align: center;
 }
-button {
+a {
   text-align: center;
 }
 
@@ -130,6 +262,14 @@ button {
   font-family: 'Lobster', sans-serif;
   font-weight: 700;
   color: white;
+  line-height: 5px;
+}
+
+.title2 {
+  font-size: 75px;
+  font-family: 'Lobster', sans-serif;
+  font-weight: 700;
+  color: #222;
   line-height: 5px;
 }
 

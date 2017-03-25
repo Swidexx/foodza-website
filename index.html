@@ -3,51 +3,133 @@
 <head>
   <title>Foodza | Home</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- jQuery -->
+  <script src="js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="js/bootstrap.min.js"></script>
+
+  <!-- Scrolling Nav JavaScript -->
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/scrolling-nav.js"></script>
+
 </head>
 <body>
-  <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
+  <video playsinline autoplay muted loop>
     <source src="assets/front.mp4" type="video/mp4">
   </video>
-  <ul>
-    <li><a href="menu.html">Home</a></li>
-    <li><a href="rate.html">Rate</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="login.html">Login</a></li>
-  </ul>
+  <div class="personal">
+    <p class="paragraph">IN CONSTRUCTION ATM</p>
+  </div>
   <br><br><br>
-  <div class="bar"><br>
+  <div class="nav">
+    <Center>
+      <p><a class="btn btn-default page-scroll" href="#about"><button id="about_btn">about us</button></a>  -  
+      <a class="btn btn-default page-scroll" href="#features"><button id="features_btn">features</button></a>  -  
+      <a class="btn btn-default page-scroll" href="#register"><button id="register_btn">register</button></a>  -  
+      <a class="btn btn-default page-scroll" href="#partners"><button id="partners_btn">our partners</button></a></p>
+    </center>
+  </div>
+  <div class="bar"><br><br><br>
     <p class="title">Foodza</p>
     <p class="subtitle">making food great again</p><Br>
-    <p>
-      <button>menu</button>
-    </p><br>
   </div>
-  <div class="bar2"><br>
-    <table align="center">
+  <br><br><br><br>
+  <div class="bar2" id="about"><br><br>
+    <p class="title2">About Us</p>
+    <p class="paragraph">
+      We provide an easy way of having a liason between producer and consumer.<br>
+      We let companies know what the people want, while rewarding people for giving them information!
+    </p><br><br>
+  </div>
+  <br>
+  <div class="bar2" id="features"><br><br>
+    <p class="title2">Features</p>
+    <table class="features" align="center">
       <tr>
-        <td></td>
-        <td>
+        <td class="features"></td>
+        <td class="features">
           <img src="assets/shopping_cart.png"><br>
-          <p class="header">Point Shop</p>
-          <p class="paragraph">Point Shop to earn rewards, such as Amazon Giftcards, Frontline in Lunch, and many more!<p>
+          <p class="header">Easy Polls and Surveys</p>
+          <p class="paragraph">Earn points by taking surveys and polls, helping Flik understand what the people want and don't want!<p>
         </td>
-        <td>
+        <td class="features">
           <img src="assets/shopping_cart.png"><br>
+          <p class="header">Earning Rewards</p>
+          <p class="paragraph">Use points to buy rewards, such as Amazon Giftcards, having front line in Lunch, and other great rewards!<p>
+        </td>
+        <td class="features"></td>
+      </tr>
+      <tr>
+        <td class="features"><br><br></td>
+      </tr>
+      <tr>
+        <td class="features"></td>
+        <td class="features">
+          <img src="assets/shopping_cart.png">
           <p class="header">Up-To-Date Menu</p>
           <p class="paragraph">Menu updated directly from Flik's menu through a reactive API.<p>
         </td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><br><br></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td><img src="assets/shopping_cart.png"></td>
-        <td><img src="assets/shopping_cart.png"></td>
-        <td></td>
+        <td class="features">
+          <img src="assets/shopping_cart.png">
+          <p class="header">Conserving Food</p>
+          <p class="paragraph">Removing waste by informing partners like Flik know how much and what the people want<p>
+        </td>
+        <td class="features"></td>
       </tr>
     </table>
+  </div>
+  <br>
+  <div class="bar4" id="register">
+    <form class="register">
+      <p class="title">Register</p>
+      <input type="text" placeholder="username" name="username" required>
+      <input type="password" placeholder="password" name="pwd" required><br><br>
+      <input type="email" placeholder="email" name="email" required>
+      <input type="text" placeholder="full name" name="name" required><br><br>
+      <select name="cars" placeholder="school" name="school" required>
+        <option value="volvo">Creighton Preparatory School</option>
+        <option value="saab">Convent of the Sacred Heart NYC</option>
+        <option value="fiat">Sacred Heart Greenwich</option>
+      </select><br><br>
+      <input class="submit" type="submit">
+    </form>
+  </div>
+  <br>
+  <div class="bar2" id="partners"><br>
+    <p class="title2">Our Partners</p>
+    <table class="features" align="center">
+      <tr>
+        <td class="features"></td>
+        <td class="features">
+          <img src="assets/flik.svg"><br>
+        </td>
+        <td class="features">
+          <img src="assets/myschoolbucks.png"><br>
+        </td>
+        <td class="features"></td>
+      </tr>
+    </table><br><br><br>
+  </div>
+  <br>
+  <div class="nav">
+    <Center>
+      <p><a class="btn btn-default page-scroll" href="#about"><button id="about_btn">about us</button></a>  -  
+      <a class="btn btn-default page-scroll" href="#features"><button id="features_btn">features</button></a>  -  
+      <a class="btn btn-default page-scroll" href="#register"><button id="register_btn">register</button></a>  -  
+      <a class="btn btn-default page-scroll" href="#partners"><button id="partners_btn">our partners</button></a></p>
+    </center>
+    <br><br><br><br><br>
+  </div>
+  <br>
+  <div class="bar3">
+    <p class="paragraph">
+      Copyright ©
+      <script type="text/javascript">
+        document.write(new Date().getFullYear());
+      </script>
+      Foodza | Designed by Ben Hall
+    </p>
   </div>
 </body>
 </html>
