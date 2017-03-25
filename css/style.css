@@ -1,0 +1,141 @@
+/*
+Green: #65a563
+*/
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700|Lobster');
+
+button{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 1);
+  background-color: transparent;
+  border: solid;
+  border-color: white;
+  border-width: 2px;
+  width: 150px;
+  height: 100%;
+  transition: .5s;
+  cursor: pointer;
+}
+
+ul {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: white;
+    font-size: 40px;
+    list-style-type: none;
+    overflow: hidden;
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: table;
+    width: 100%;
+    margin: 0 auto;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #222;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+li a:hover:not(.active) {
+    background-color: #222;
+    color: white;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+.bar {
+  background-color: transparent;
+  width: 75%;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: -2;
+}
+
+.bar2 {
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  margin: 0 auto;
+}
+
+.header {
+  color: #222;
+  font-family: 'Josefin Sans';
+  font-size: 30px;
+  font-weight: 600;
+}
+
+img {
+  width: 100px;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  width: 25%;
+  text-align: center;
+}
+
+.paragraph {
+  color: #222;
+  font-family: 'Josefin Sans';
+  font-size: 20px;
+  font-weight: 300;
+}
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url(polina.jpg) no-repeat;
+  background-size: cover;
+
+}
+
+p {
+  text-align: center;
+}
+button {
+  text-align: center;
+}
+
+.title {
+  font-size: 75px;
+  font-family: 'Lobster', sans-serif;
+  font-weight: 700;
+  color: white;
+  line-height: 5px;
+}
+
+.subtitle {
+  font-size: 25px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  color: white;
+}
