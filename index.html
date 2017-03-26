@@ -2,17 +2,13 @@
 <html>
 <head>
   <title>Foodza | Home</title>
+  <link rel=icon href=assets/favicon.png>
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <!-- jQuery -->
   <script src="js/jquery.js"></script>
-
-  <!-- Bootstrap Core JavaScript -->
   <script src="js/bootstrap.min.js"></script>
-
-  <!-- Scrolling Nav JavaScript -->
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/scrolling-nav.js"></script>
-
+  <script src="js/script.js"></script>
 </head>
 <body>
   <video playsinline autoplay muted loop>
@@ -24,10 +20,11 @@
   <br><br><br>
   <div class="nav">
     <Center>
-      <p><a class="btn btn-default page-scroll" href="#about"><button id="about_btn">about us</button></a>  -  
-      <a class="btn btn-default page-scroll" href="#features"><button id="features_btn">features</button></a>  -  
-      <a class="btn btn-default page-scroll" href="#register"><button id="register_btn">register</button></a>  -  
-      <a class="btn btn-default page-scroll" href="#partners"><button id="partners_btn">our partners</button></a></p>
+      <p><a class="btn btn-default page-scroll" href="#about"><button id="about_btn">about us</button></a>  -
+      <a class="btn btn-default page-scroll" href="#features"><button id="features_btn">features</button></a>  -
+      <a class="btn btn-default page-scroll" href="#register"><button id="register_btn">register</button></a>  -
+      <a class="btn btn-default page-scroll" href="#partners"><button id="partners_btn">our partners</button></a>  -
+      <button onclick="document.getElementById('id01').style.display='block'">login</button></p>
     </center>
   </div>
   <div class="bar"><br><br><br>
@@ -83,10 +80,10 @@
   <div class="bar4" id="register">
     <form class="register">
       <p class="title">Register</p>
-      <input type="text" placeholder="username" name="username" required>
-      <input type="password" placeholder="password" name="pwd" required><br><br>
-      <input type="email" placeholder="email" name="email" required>
-      <input type="text" placeholder="full name" name="name" required><br><br>
+      <input type="text" placeholder="enter username" name="username" required>
+      <input type="password" placeholder="enter password" name="pwd" required><br><br>
+      <input type="email" placeholder="enter email" name="email" required>
+      <input type="text" placeholder=" enter full name" name="name" required><br><br>
       <select name="cars" placeholder="school" name="school" required>
         <option value="volvo">Creighton Preparatory School</option>
         <option value="saab">Convent of the Sacred Heart NYC</option>
@@ -114,14 +111,33 @@
   <br>
   <div class="nav">
     <Center>
-      <p><a class="btn btn-default page-scroll" href="#about"><button id="about_btn">about us</button></a>  -  
-      <a class="btn btn-default page-scroll" href="#features"><button id="features_btn">features</button></a>  -  
-      <a class="btn btn-default page-scroll" href="#register"><button id="register_btn">register</button></a>  -  
-      <a class="btn btn-default page-scroll" href="#partners"><button id="partners_btn">our partners</button></a></p>
+      <p><a class="btn btn-default page-scroll" href="#about"><button id="about_btn">about us</button></a>  -
+      <a class="btn btn-default page-scroll" href="#features"><button id="features_btn">features</button></a>  -
+      <a class="btn btn-default page-scroll" href="#register"><button id="register_btn">register</button></a>  -
+      <a class="btn btn-default page-scroll" href="#partners"><button id="partners_btn">our partners</button></a>  -
+      <button onclick="document.getElementById('id01').style.display='block'">login</button></p>
     </center>
     <br><br><br><br><br>
   </div>
   <br>
+  <div id="id01" class="modal">
+
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label><b class="header">username</b></label>
+      <input class="login" type="text" placeholder="enter username" name="username" required>
+<br>
+      <label><b class="header">password</b></label>
+      <input class="login" type="password" placeholder="enter password" name="pwd" required>
+<br>
+      <button class="login" type="submit">login</button>
+    </div>
+  </form>
+</div>
   <div class="bar3">
     <p class="paragraph">
       Copyright ©

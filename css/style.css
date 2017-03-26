@@ -7,7 +7,7 @@
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-button#register_btn, button#partners_btn, button#about_btn, button#features_btn{
+button {
   font-family: 'Josefin Sans', sans-serif;
   background-color: white;
   font-size: 30px;
@@ -20,9 +20,13 @@ button#register_btn, button#partners_btn, button#about_btn, button#features_btn{
   text-decoration: none;
   border:none;
 }
-button#register_btn:hover, button#partners_btn:hover, button#about_btn:hover, button#features_btn:hover {
+button:hover {
   background-color: #222;
   color: white;
+}
+
+button.login {
+  width: 100%;
 }
 
 a.footer{
@@ -56,7 +60,30 @@ ul{
     margin: 0 auto;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
+@media screen and (min-width: 1024px) {
+  .submit:hover {
+    background-color: white;
+    color: #222;
+  }
+  .submit {
+    width: 500px;
+  }
+  select {
+    width: 500px;
+  }
+  .bar4 {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .submit:hover {
+    background-color: white;
+    color: #222;
+  }
+  .bar4 {
+    width: 100%;
+  }
+}
 form.register {
   text-align: center;
   font-family: 'Josefin Sans', sans-serif;
@@ -76,7 +103,6 @@ input{
 }
 
 select {
-  width: 500px;
   border: none;
   height: 50px;
   text-align: center;
@@ -92,16 +118,11 @@ select {
   background-color: transparent;
   border: solid;
   border-color: white;
+  border-radius: 0px;
   border-width: 1px;
-  width: 500px;
   transition: .5s;
   cursor: pointer;
   text-align: center;
-}
-
-.submit:hover {
-  background-color: white;
-  color: #222;
 }
 
 .personal{
@@ -177,7 +198,6 @@ li a:hover:not(.active) {
 
 .bar4 {
   background-color: transparent;
-  width: 50%;
   top: 0;
   left: 0;
   margin: 0 auto;
@@ -223,6 +243,12 @@ td.menu:nth-child(even) {
 
 td.menu:nth-child(odd) {
   background-color: #efefef;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
 }
 
 .paragraph {
@@ -278,4 +304,87 @@ a {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
   color: white;
+}
+
+input.login[type=text], input.login[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
 }
