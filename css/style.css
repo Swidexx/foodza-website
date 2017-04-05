@@ -15,11 +15,12 @@ button.account {
   transition: .5s;
   cursor: pointer;
   text-decoration: none;
+  background-color: transparent;
   border: none;
 }
 
 button.account:hover {
-  color: #444;
+  color: white;
 }
 
 button.navbar {
