@@ -7,11 +7,29 @@
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+button.login {
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: white;
+  font-size: 30px;
+  font-weight: 300;
+  color: #222;
+  padding-top: 5px;
+  height: 50px;
+  transition: .5s;
+  cursor: pointer;
+  text-decoration: none;
+  border:none;
+}
+button.login:hover {
+  background-color: #222;
+  color: white;
+}
+
 button.account {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 30px;
   font-weight: 300;
-  color: #222;
+  color: #555;
   transition: .5s;
   cursor: pointer;
   text-decoration: none;
@@ -20,7 +38,7 @@ button.account {
 }
 
 button.account:hover {
-  color: white;
+  color: black;
 }
 
 button.navbar {
