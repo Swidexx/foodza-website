@@ -1,3 +1,28 @@
+<?php
+  $connection = mysql_connect("localhost","root","Nepa65127") OR die(mysql_error());
+  $db_select = mysql_select_db("logins",$connection) OR die(mysql_error());
+  $errors = array();
+  if(isset($_POST["iebugaround"])){
+  } else {
+    $uname = "";
+  }
+  /lets fetch posted details
+  $uname = trim(htmlentities($_POST['username']));
+  $passw = trim(htmlentities($_POST['password']));
+  if(!$errors){
+  }
+  //encrypt the password
+  $passw = sha1($passw);
+  $salt = md5("userlogin");
+  $pepper = "kikikikikicbtr";
+
+  $passencrypt = $salt . $passw . $pepper;
+
+  //find out if user and password are present
+  $query = "SELECT * FROM users WHERE username='".mysql_real_escape_string($uname)."' AND password='".mysql_real_escape_string($passencrypt)."'";
+  $result = mysql_query($query) OR die(mysql_error());
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -126,8 +151,9 @@
     </div>
 
     <div class="container">
+      <input name="iebugaround" type="hidden" value="1">
       <label><b class="header">username</b></label>
-      <input class="login" type="text" placeholder="enter username" name="username" required>
+      <input class="login" value="<?php echo $uname ; ?>" type="text" placeholder="enter username" name="username" required>
 <br>
       <label><b class="header">password</b></label>
       <input class="login" type="password" placeholder="enter password" name="pwd" required>
