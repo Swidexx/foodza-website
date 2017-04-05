@@ -1,28 +1,3 @@
-<?php
-  $connection = mysql_connect("localhost","root","Nepa65127") OR die(mysql_error());
-  $db_select = mysql_select_db("logins",$connection) OR die(mysql_error());
-  $errors = array();
-  if(isset($_POST["iebugaround"])){
-  } else {
-    $uname = "";
-  }
-  /lets fetch posted details
-  $uname = trim(htmlentities($_POST['username']));
-  $passw = trim(htmlentities($_POST['password']));
-  if(!$errors){
-  }
-  //encrypt the password
-  $passw = sha1($passw);
-  $salt = md5("userlogin");
-  $pepper = "kikikikikicbtr";
-
-  $passencrypt = $salt . $passw . $pepper;
-
-  //find out if user and password are present
-  $query = "SELECT * FROM users WHERE username='".mysql_real_escape_string($uname)."' AND password='".mysql_real_escape_string($passencrypt)."'";
-  $result = mysql_query($query) OR die(mysql_error());
-
-?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -103,17 +78,12 @@
   </div>
   <br>
   <div class="bar4" id="register">
-    <form class="register">
+    <form action="register.php" method="POST" class="register">
       <p class="title">Register</p>
-      <input type="text" placeholder="enter username" name="username" required>
+      <input type="text" placeholder="enter username" name="uid" required>
       <input type="password" placeholder="enter password" name="pwd" required><br><br>
       <input type="email" placeholder="enter email" name="email" required>
       <input type="text" placeholder=" enter full name" name="name" required><br><br>
-      <select name="cars" placeholder="school" name="school" required>
-        <option value="volvo">Creighton Preparatory School</option>
-        <option value="saab">Convent of the Sacred Heart NYC</option>
-        <option value="fiat">Sacred Heart Greenwich</option>
-      </select><br><br>
       <input class="submit" type="submit">
     </form>
   </div>
@@ -152,13 +122,10 @@
     </div>
 
     <div class="container">
-      <input name="iebugaround" type="hidden" value="1">
       <label><b class="header">username</b></label>
-      <input class="login" value="<?php echo $uname ; ?>" type="text" placeholder="enter username" name="username" required>
-<br>
+      <input class="login" type="text" placeholder="enter username" name="username" required><br>
       <label><b class="header">password</b></label>
-      <input class="login" type="password" placeholder="enter password" name="pwd" required>
-<br>
+      <input class="login" type="password" placeholder="enter password" name="pwd" required><br>
       <button class="login" type="submit">login</button>
     </div>
   </form>
