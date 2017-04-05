@@ -84,7 +84,7 @@
       <input type="password" placeholder="enter password" name="pwd" required><br><br>
       <input type="email" placeholder="enter email" name="email" required>
       <input type="text" placeholder=" enter full name" name="name" required><br><br>
-      <input class="submit" type="submit">
+      <button type="submit">sign up</button>
     </form>
   </div>
   <br>
