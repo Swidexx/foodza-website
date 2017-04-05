@@ -7,7 +7,21 @@
   box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-button {
+button.account {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: #222;
+  transition: .5s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button.account:hover {
+  color: #444;
+}
+
+button.nav {
   font-family: 'Josefin Sans', sans-serif;
   background-color: white;
   font-size: 30px;
@@ -20,7 +34,7 @@ button {
   text-decoration: none;
   border:none;
 }
-button:hover {
+button.nav:hover {
   background-color: #222;
   color: white;
 }
